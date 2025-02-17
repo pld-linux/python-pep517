@@ -3,7 +3,7 @@
 %bcond_without	doc	# Sphinx documentation
 %bcond_without	tests	# unit tests
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with		python3 # CPython 3.x module (see python3-pep517.spec)
 
 Summary:	Wrappers to build Python packages using PEP 517 hooks
 Summary(pl.UTF-8):	Opakowanie do budowania pakietów Pythona przy użyciu uchwytów PEP 517
