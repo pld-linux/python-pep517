@@ -1,15 +1,15 @@
 #
 # Conditional build:
 %bcond_without	doc	# Sphinx documentation
-%bcond_without	tests	# unit tests
+%bcond_with	tests	# unit tests (hang at the end)
 %bcond_without	python2 # CPython 2.x module
-%bcond_with		python3 # CPython 3.x module (see python3-pep517.spec)
+%bcond_with	python3 # CPython 3.x module (see python3-pep517.spec)
 
 Summary:	Wrappers to build Python packages using PEP 517 hooks
 Summary(pl.UTF-8):	Opakowanie do budowania pakietów Pythona przy użyciu uchwytów PEP 517
 Name:		python-pep517
 Version:	0.10.0
-Release:	7
+Release:	8
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/pep517/
@@ -24,6 +24,7 @@ BuildRequires:	python-importlib_metadata
 BuildRequires:	python-pip
 BuildRequires:	python-pytest
 BuildRequires:	python-pytest-flake8
+BuildRequires:	python-testpath
 BuildRequires:	python-toml
 BuildRequires:	python-zipp
 %endif
@@ -35,6 +36,7 @@ BuildRequires:	python3-setuptools
 BuildRequires:	python3-pip
 BuildRequires:	python3-pytest
 BuildRequires:	python3-pytest-flake8
+BuildRequires:	python3-testpath
 BuildRequires:	python3-toml
 %if "%{py3_ver}" < "3.8"
 BuildRequires:	python3-importlib_metadata
